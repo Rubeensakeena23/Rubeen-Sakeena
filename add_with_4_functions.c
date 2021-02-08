@@ -6,21 +6,22 @@ int input()
   scanf("%d", &a);
   return a;
 }
-void output()
+void output(int a, int b)
 {
-  printf("The sum is : %d \n", Sum());
+  printf("The sum is : %d \n", Sum(a,b));
 }
 int Sum(int a, int b)
 {
   int sum = a+ b;
   return sum;
 }
-void main()
+int main()
 {
   printf("Enter a: ");
   int a = input();
   printf("Enter b: ");
   int b = input();
-  Sum(a,b);
-  output();
+  output(a,b);
+  return 0;
 }
+
