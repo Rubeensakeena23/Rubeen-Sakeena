@@ -11,7 +11,7 @@ return a;
 }
 struct points input2(struct points b)
 {
-printf("Enter the first coordinate");
+printf("Enter the second coordinate");
 scanf("%d %d", &b.x, &b.y);
 return b;
 }
