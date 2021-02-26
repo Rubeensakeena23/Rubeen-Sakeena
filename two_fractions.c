@@ -3,25 +3,23 @@ struct fractions{
 int n,d;
 };
 typedef struct fractions frac;
-struct fractions input1(frac a)
+struct fractions input(frac a)
 {
-    printf("Enter the first fraction");
     scanf("%d %d", &a.n, &a.d);
     return a;
 }
-struct fractions input2(frac b)
-{
-    printf("Enter the second fraction");
-    scanf("%d %d", &b.n, &b.d);
-    return b;
-}
+
 int gcd(int a, int b)
-{							
-    if(a==0)						
-    {							
-        return b;
+{ 
+   int gcd;
+   for(int i=1;i<=a && i<=b; ++i)
+   { 
+      if(a%i==0 && b%i==0)
+        { 
+ 	        gcd=i;
+        }
     }
-    return gcd(b%a,a);
+    return gcd;
 }
 void addition(frac a, frac b)
 {
@@ -36,8 +34,10 @@ void addition(frac a, frac b)
 int main()  
 {
     frac a, b;
-    a = input1(a);
-    b = input2(b);
+    printf("Enter the first fraction");
+    a = input(a);
+    printf("Enter the second fraction");
+    b = input(b);
     addition(a,b);
     return 0;
 }
