@@ -1,29 +1,26 @@
-//WAP to find the volume of a tromboloid using 4 functions.
 #include<stdio.h>
-float input()
+float input(float h)
 {
-	int a;
-	scanf("%d",&a);
-	return a;
+    scanf("%f", &h);
+    return h;
 }
-float volume(int h, int d, int b)
+float tromboloid(float h, float b, float d)
 {
-	float vol = ((h*b*d) + (d/b))/3;
-	return vol;
+    float volume;
+    volume = ((h*b*d)+(d/b))/3;
+    return volume;
 }
-void output(int h, int b, int d)
+void output(float h, float b, float d)
 {
-	printf("The volume of tromboloid is %f\n",volume(h, b, d));
+    printf("The volume is: %f", tromboloid(h,b,d));
 }
 int main()
 {
-	float h, b, d;
-	printf("Enter h: ");
-	h = input();
-	printf("Enter b: ");
-	b = input();
-	printf("Enter d: ");
-	d = input();
-	output(h, b, d);
-	return 0;
+    float h, b, d;
+    printf("Enter h, b and d:");
+    h=input(h);
+    b=input(b);
+    d=input(d);
+    output(h,b,d);
+    return 0;
 }
